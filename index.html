@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Started！</title>
+  </head>
+  <body>
+    <script src="bundle.js"></script>
+    <div id="test"></div>
+    <script>
+    var text = `# Root
+## sub1
+### 11
+### 12
+
+## sub2
+### 21
+#### 211
+##### 2111
+##### 2112
+#### 212
+
+## sub3
+### 31
+#### 311
+##### 3111
+##### 3112
+##### 3113
+#### 312
+## sub4
+`
+      document.getElementById("test").innerHTML = mindmap.render(text);
+    </script>
+## sub1
+### 11
+### 12
+
+## sub2
+### 21
+#### 211
+##### 2111
+##### 2112
+#### 212
+
+## sub3
+### 31
+#### 311
+##### 3111
+##### 3112
+##### 3113
+#### 312
+
+## sub4    
+  </body>
+</html>
