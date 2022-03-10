@@ -133,7 +133,7 @@ const calculateTextDimensions = memoize(
   },
   (text, config) => `${text}-${config.fontSize}-${config.fontWeight}-${config.fontFamily}`
 );      
-      document.getElementById("test").innerHTML =calculateTextDimensions("test",{}).width;
+      document.getElementById("test").innerHTML =d3.create("svg").html()
     </script>
   </body>
 </html>

@@ -30,8 +30,8 @@ export default function draw(context:MindContext):string {
 
         //<text x="0" y="15" fill="red">I love SVG</text>
         let text = "<text "
-        text += 'x="' + (node.centerX - node.width/2) + '" ';
-        text += 'y="' + (node.centerY) + '" ';
+        text += 'x="' + (node.centerX - node.textWidth/2) + '" ';
+        text += 'y="' + (node.centerY + 5) + '" ';
         text += 'fill="red">' 
         text += node.title
         text += '</text>\n';

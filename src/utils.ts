@@ -1,5 +1,5 @@
 import {
-    select
+    select,create
 } from 'd3';
 
 const lineBreakRegex = /<br\s*\/?>/gi;

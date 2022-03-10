@@ -1,8 +1,10 @@
 import MindContext from "./MindContext";
 import MindNode from "./MindNode";
-import MindToken from "./MindToken";
-import {TokenType} from "./MindToken";
+import utils from "../utils";
+
 const NODE_PADDING = 50;
+const NODE_SPACING = 20;
+const NODE_VERTICAL_SPACING = 20;
 
 export default function calc(context:MindContext):void {
     let root = context.node;
@@ -13,8 +15,12 @@ export default function calc(context:MindContext):void {
     calcXY(root,context);
 }
 function calcSize(node:MindNode){
-    node.width = 100;
-    node.height = 60;
+    let textMeasure = utils.calculateTextDimensions(node.title,{});
+    node.textWidth = textMeasure.width;
+    node.textHeight = textMeasure.height;
+    
+    node.width = textMeasure.width + NODE_SPACING*2;
+    node.height = textMeasure.height + NODE_VERTICAL_SPACING;
     if(node.children!=undefined){
         let i = 0;
         node.childrenWidth=0;

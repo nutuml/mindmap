@@ -11,6 +11,9 @@ export default class MindNode {
     width:number;
     height:number;
 
+    textWidth:number;
+    textHeight:number;
+
     childrenWidth:number;
     childrenHeight:number;
     
