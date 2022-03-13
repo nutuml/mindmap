@@ -1,3 +1,5 @@
+import { TextConfig } from "../config/constant";
+
 export default class MindNode { 
     //级别，根节点为一级
     level:number; 
@@ -20,6 +22,8 @@ export default class MindNode {
     // 中心点坐标
     centerX:number;
     centerY:number;
+
+    textConfig: TextConfig;
  
     constructor(level:number,title:string) { 
          this.level = level;

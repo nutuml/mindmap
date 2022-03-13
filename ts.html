@@ -8,7 +8,11 @@
     <script src="bundle.js"></script>
     <div id="test"></div>
     <script>
-      document.getElementById("test").innerHTML = mindmap.utils.calculateTextDimensions("test",{}).width;
+      document.getElementById("test").innerHTML = mindmap.utils.calculateTextDimensions("test",{fontSize:28,
+    fontWeight:400,
+    fontFamily:'Arial',
+    horizonSpace:50,
+    verticalSpace:40}).height;
     </script>
 
   </body>

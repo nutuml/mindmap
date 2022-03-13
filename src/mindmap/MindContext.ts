@@ -7,5 +7,9 @@ export default class MindContext {
     node:MindNode;
 
     nodePadding:number;
+    rootPadding:number;
     nodeStype:string;
+
+    svgWidth:number;
+    svgHeight:number;
 }

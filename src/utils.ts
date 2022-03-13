@@ -2,6 +2,8 @@ import {
     select,create
 } from 'd3';
 
+import { TextConfig } from './config/constant';
+
 const lineBreakRegex = /<br\s*\/?>/gi;
 
 const drawSimpleText = function (elem:any, textData:TextObj) {
@@ -79,14 +81,10 @@ const memoize = (fn:Function, resolver:Function): Function => {
     }
   };
 };
-class TextConfig {     
-    fontSize:number;
-    fontWeight:number;
-    fontFamily:string;
-}
+
 const calculateTextDimensions = memoize(
   function (text:string, config:TextConfig) {
-    config = Object.assign({ fontSize: 12, fontWeight: 400, fontFamily: 'Arial' }, config);
+    config = Object.assign({ fontSize: 14, fontWeight: 400, fontFamily: 'Arial' }, config);
     const { fontSize, fontFamily, fontWeight } = config;
     if (!text) {
       return { width: 0, height: 0 };
@@ -107,6 +105,8 @@ const calculateTextDimensions = memoize(
     }
 
     const g = body.append('svg');
+    g.attr("width","500");
+    g.attr("height","500")
 
     for (let fontFamily of fontFamilies) {
       let cheight = 0;
@@ -133,10 +133,7 @@ const calculateTextDimensions = memoize(
     let index =
       isNaN(dims[1].height) ||
       isNaN(dims[1].width) ||
-      isNaN(dims[1].lineHeight) ||
-      (dims[0].height > dims[1].height &&
-        dims[0].width > dims[1].width &&
-        dims[0].lineHeight > dims[1].lineHeight)
+      isNaN(dims[1].lineHeight) 
         ? 0
         : 1;
     return dims[index];
