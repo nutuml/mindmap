@@ -78,7 +78,7 @@ export default function draw(context:MindContext):string {
         if(offSpan>maxSpan){
             offSpan = maxSpan;
         }
-        console.log("mid=" + mid + ", off=" + off + ", offSpan=" + offSpan)
+        //console.log("mid=" + mid + ", off=" + off + ", offSpan=" + offSpan)
         return fromX + totalSpan * (maxSpan-offSpan)/maxSpan;
     }
     /**

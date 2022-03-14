@@ -23,7 +23,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
       library: {
         name: 'mindmap',
-        type: 'var',
+        type: 'umd',
         export: 'default',
       },
     },
